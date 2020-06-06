@@ -15,3 +15,4 @@ Considerations
   make a ``404.rst`` file under ``docs/src`` and
   require specific doc package versions in ``docs/requirements.txt``
 - Use continuous integration like GitHub Actions or Travis
+- Set up issue and pull request templates
