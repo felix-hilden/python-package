@@ -1,6 +1,7 @@
 python-package
 ==============
 |build| |documentation|
+
 A package template for Python.
 
 Please find the assumed tooling, further considerations and explanations below.
