@@ -14,7 +14,7 @@ readme_file = root / 'readme.rst'
 
 pypi_url = 'https://pypi.org/project/python-package'
 github_url = 'https://github.com/felix-hilden/python-package'
-documentation_url = github_url + '/wiki'
+documentation_url = 'https://nonexistentproject.rtfd.org'
 
 extras_require = {
     'docs': [
