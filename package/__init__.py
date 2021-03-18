@@ -1,3 +1,8 @@
+"""
+Package docstring.
+
+See online documentation at `RTD <http://nonexistentproject.rtfd.org>`_.
+"""
 import os as _os
 from pathlib import Path as _Path
 

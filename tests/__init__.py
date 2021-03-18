@@ -1,9 +1,6 @@
-import unittest
+import package
 
 
-class TestPackage(unittest.TestCase):
-    pass
-
-
-if __name__ == '__main__':
-    unittest.main()
+class TestPackage:
+    def test(self):
+        assert package.__version__
