@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "package"
+description = "Python package template."
+readme = "readme.rst"
+license = {file = "LICENSE"}
+dynamic = ["version"]
+
+requires-python = ">=3.9"
+dependencies = []
+
+keywords = []
+authors = [{name = "Felix Hildén", email = "felix.hilden@gmail.com"}]
+maintainers = [{name = "Felix Hildén", email = "felix.hilden@gmail.com"}]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.urls]
+homepage = "https://github.com/felix-hilden/python-package"
+download = "https://github.com/felix-hilden/python-package"
+source = "https://github.com/felix-hilden/python-package"
+issues = "https://github.com/felix-hilden/python-package/issues"
+documentation = "https://github.com/felix-hilden/python-package"
+
+[tool.setuptools.dynamic]
+version = {attr = "package.__version__"}
+
+[tool.pytest.ini_options]
+python_files = "*.py"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["src"]
+branch = true
+command_line = "-m pytest"
+
+[tool.coverage.report]
+precision = 1
+show_missing = true
+skip_covered = true
+
+[tool.ruff.lint]
+ignore = ["D107", "D203", "D212", "D413"]
+
+[tool.ruff.format]
+skip-magic-trailing-comma = true

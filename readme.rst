@@ -4,25 +4,39 @@ python-package
 
 A package template for Python.
 
-Please find the assumed tooling, further considerations and explanations below.
-Any unwanted part of the package can simply be removed.
 To start using this template, familiarise yourself with the files and tooling,
-change any references from "package" to your chosen package name
-and set up with external providers like Read The Docs.
+change any references from "package" to your chosen package name.
 
-Assumed tooling
----------------
-- Hosted on GitHub
+Tooling
+-------
+
 - Pytest and Coverage for testing
-- Tox and linters for static analysis
-- Numpy-style ``.rst`` documentation with Sphinx (see ``docs/src/conf.py``)
-- CI performed with GitHub Actions
-- Documentation hosted on Read The Docs
+- Uv, tox, ruff etc.
+- Numpy-style ``.rst`` docs with Sphinx hosted on Read The Docs
+- Hosted on GitHub with GH Actions CI
 
-Considerations
---------------
-- Create a separate readme for PyPI
-- Create a contribution guide
+Setup
+-----
+
+- Change any references to "Package" to your liking
+- Create ``.pypirc`` file for publishing the package
+
+.. code:: ini
+
+   [pypi]
+   username = __token__
+   password = pypi-<your-token>
+
+.. code:: bash
+
+   # Bootstrap
+   pip install uv
+   uv venv
+   source .venv/bin/activate # or .venv/Scripts/activate on Windows
+
+   # Setup and verify
+   uv pip install -e . -r requirements/dev
+   tox
 
 .. |build| image:: https://github.com/felix-hilden/python-package/workflows/CI/badge.svg
    :target: https://github.com/felix-hilden/python-package/actions

@@ -1,27 +1,69 @@
 # See for more potential targets to ignore:
 # https://github.com/github/gitignore/blob/master/Python.gitignore
 
-# Python
+# Python files
+__pycache__/
 *.py[cod]
-**__pycache__/
-build/
-dist/
+*$py.class
+*.so
+__pypackages__/
+
+# Distribution / packaging
+.pypirc
+.Python
+/build/
+/develop-eggs/
+/dist/
+/downloads/
+/eggs/
+/.eggs/
+/lib/
+/lib64/
+/parts/
+/sdist/
+/var/
+/wheels/
+/share/python-wheels/
+/.installed.cfg
 *.egg-info/
+*.egg
+/*.egg-info/
+/MANIFEST
+
+# Testing
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+cover/
+.pytest_cache/
+
+# Documentation
+/docs/build/
+
+# Environments
+/.env/
+/.venv/
+/env/
+/venv/
+/ENV/
+/env.bak/
+/venv.bak/
+
+# Type checkers
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
 
 # Editors
 .idea/
 .vim/
-
-# Tools
-.coverage
-coverage.xml
-docs/build
-.tox/
-
-# Environments
-.env
-.venv
-env/
-venv/
-env.bak/
-venv.bak/
+.vscode/

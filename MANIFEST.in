@@ -1,2 +1,2 @@
-include readme.rst
-include package/VERSION
+include readme.rst tox.ini
+global-exclude *.py[cod] __pycache__ *.so

@@ -1,6 +1,5 @@
 import package
 
 
-class TestPackage:
-    def test(self):
-        assert package.__version__
+def test_package():
+    assert package.__version__

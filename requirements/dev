@@ -1,0 +1,7 @@
+-r docs
+-r test
+-r build
+
+tox>=4
+doc8>=0.9
+ruff
